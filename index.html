@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&amp;subset=latin-ext" rel="stylesheet">
+    <style>
+        body{
+        font-family: 'Roboto', sans-serif;
+        background-color: #f2f2f2;
+    }
+    
+    .container {
+        position:absolute;
+	    top:50%;
+	    left:50%;
+	    transform: translate(-50%,-50%);
+        width: 30%;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 4px;
+        box-shadow: 0px 0px 20px 5px rgba(0,0,0,0.75);
+    }
+
+    input,
+    textarea {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 4px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+
+    input.invalid,textarea.invalid {
+        border-color: #900;
+        background-color: #FDD;
+    }
+
+    input:focus.invalid,textarea:focus.invalid {
+        outline: none;
+    }
+
+    .btn {
+        padding: 12px 20px;
+        margin-top: 16px;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        cursor: pointer;
+        background-color: #45a049;
+        margin: 0 auto;
+    }
+
+    .btn:hover {
+        background-color: #fff;
+    }
+
+    .error {
+        margin-top:8px;
+        color: red;
+    }
+</style>
+
+
+</head>
+
+<body>
+    <div>
+        <div class="container">
+            <form novalidate>
+                <h2>Formularz kontaktowy:</h2>
+                <div class="imie">
+                    <label for="input_imie">Imię:</label>
+                    <input type="text" id="input_imie" name="imie" placeholder="Wpisz imię">
+                    <p class="error"></p>
+                </div>
+                <div class="nazwisko">
+                    <label for="input_nazwisko">Nazwisko:</label>
+                    <input type="text" id="input_nazwisko" name="nazwisko" placeholder="Wpisz nazwisko">
+                    <p class="error"></p>
+                </div>
+                <div class="data_ur">
+                    <label for="input_data_ur">Data urodzenia:</label>
+                    <input type="text" id="input_data_ur" name="data_ur" placeholder="Wpisz datę urodzenia">
+                    <p class="error"></p>
+                </div>
+                <div class="email">
+                    <label for="input_email">Email:</label>
+                    <input type="email" id="input_email" name="email" placeholder="Wpisz email">
+                    <p class="error"></p>
+                </div>
+                <div class="komentarz">
+                    <label for="komentarz">Komentarz:</label>
+                    <textarea rows="4" cols="50" name="komentarz" id="komentarz" placeholder="Dodaj komentarz"></textarea>
+                    <p class="error"></p>
+                </div>
+                <input type="submit" class="btn" value="Wyślij"></input>
+            </form>
+        </div>
+        <script src="main.js"></script>
+</body>
+
+</html>
